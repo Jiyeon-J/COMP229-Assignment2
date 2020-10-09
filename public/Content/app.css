@@ -1,0 +1,21 @@
+/*Custom css goes here */
+/*
+Filename: Assignment1
+Student name: Jiyeon Jeon
+Student ID: 301103064
+Date: 2020.10.08
+*/
+
+
+/*img { display: block; margin: 0px auto; }
+h3 { text-align: center; }*/
+.container {text-align: center;}
+
+
+h4,h5 {
+    color: rgb(47, 107, 219);
+}
+
+.display-6, .display-12 {
+    color: rgb(112, 112, 112);
+}
