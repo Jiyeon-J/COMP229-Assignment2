@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-var app = require('./config/app');
+var app = require('./server/config/app');
 var debug = require('debug')('assignment:server');
 var http = require('http');
 
@@ -15,7 +15,7 @@ var http = require('http');
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
-/**
+/*
  * Create HTTP server.
  */
 var server = http.createServer(app);

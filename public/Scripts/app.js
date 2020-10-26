@@ -6,53 +6,27 @@ Student ID: 301103064
 Date: 2020.10.08
 */
 
-
-
-"use strict";
 (function(){
 
     function Start()
     {
         console.log("App Started...");
 
+        let dangerButtons = document.getElementsByClassName("btn-danger");
 
-        if(document.title === "Contact Me")
-        {
-            let sendButton = document.getElementById("sendButton");
-            let cancelButton = document.getElementById("cancelButton");
-
-            let fullName = document.getElementById("fullName");
-            let emailAddress = document.getElementById("emailAddress");
-            let contactNumber = document.getElementById("contactNumber");
-            let message = document.getElementById("message");
-
-            sendButton.addEventListener('click', (event) => {
-                event.preventDefault();
-                console.info(
-                    `Full Name      : ${fullName}
-                     Email Address  : ${emailAddress}
-                     Contact Number : ${contactNumber}
-                     Your Message   : ${message}
-                    `
-                );
-            });
-
-            cancelButton.addEventListener('click', (event) => {
-                event.preventDefault();
-                if(confirm("Are you sure?"))
+        for (const button of dangerButtons) {
+            button.addEventListener('click', (event) => {
+                if(!confirm("Are you sure?"))
                 {
-                    location.href = "/home";
+                    event.preventDefault();
+                    location.href = '/movie-list';
                 }
-                
             });
         }
-
-        
     }
 
-    window.addEventListener("load",Start);
+    window.addEventListener('load', Start);
 })();
-
 
 (function(){
 
@@ -73,7 +47,7 @@ Date: 2020.10.08
         
     }
 
-    window.addEventListener("load",goto);
+    window.addEventListener("load", goto);
 })();
 
 
